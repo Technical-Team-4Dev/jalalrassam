@@ -1,14 +1,307 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقعي الشخصي</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جلال رسام | مطور تطبيقات فلاتر</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-pattern {
+            background-color: #111827;
+            background-image: radial-gradient(circle at 1px 1px, #374151 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        .glass-effect {
+            background: rgba(31, 41, 55, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body style="font-family:sans-serif; text-align:center; margin-top:50px;">
-  <h1>مرحباً، أنا Jalal Rassam</h1>
-  <p>مطور تطبيقات مستقل (Freelance Developer)</p>
-  <p>للتواصل: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-  <p>هاتف: +9677XXXXXXX</p>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-700">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-cyan-400">جلال رسام</h1>
+            <nav class="hidden md:flex space-x-reverse space-x-6">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">من أنا</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">المهارات</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">المشاريع</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">تواصل معي</a>
+            </nav>
+            <div class="md:hidden">
+                 <!-- Mobile menu button can be added here if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-pattern min-h-screen flex items-center">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Placeholder for a personal photo -->
+                    <img src="https://placehold.co/160x160/1F2937/9ca3af?text=JR" alt="صورة جلال رسام" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-gray-700 shadow-lg">
+                    <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                        <span class="text-white">جلال فيصل رسام</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl text-cyan-400 mb-8">مطور تطبيقات موبايل باستخدام Flutter | مصمم واجهات UI/UX</p>
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+                        أقوم ببناء تطبيقات موبايل عالية الأداء والجودة بتصميمات عصرية وجذابة، مع خبرة متعمقة في Flutter و Firebase.
+                    </p>
+                    <div class="flex justify-center items-center gap-4">
+                        <a href="#projects" class="bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-all duration-300 shadow-lg">
+                            شاهد أعمالي
+                        </a>
+                        <a href="https://github.com/JalalFaisalRassam" target="_blank" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-600 transition-all duration-300 shadow-lg flex items-center gap-2">
+                            <i data-lucide="github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">نبذة عني</h2>
+                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-2/3 text-lg text-gray-300 leading-relaxed">
+                        <p class="mb-4">
+                            مطور تطبيقات شغوف حاصل على بكالوريوس في تقنية المعلومات بتقدير امتياز. أمتلك خبرة قوية في تطوير تطبيقات الموبايل باستخدام إطار العمل Flutter، مع التركيز على كتابة كود نظيف وقابل للصيانة.
+                        </p>
+                        <p class="mb-4">
+                            لدي معرفة عميقة في هياكل البيانات والخوارزميات، وقواعد البيانات بنوعيها Relational و NoSQL مثل Firebase و MySQL. بالإضافة إلى خبرتي في التطوير، لدي شغف بتصميم واجهات المستخدم (UI/UX) باستخدام Figma لإنشاء تجارب مستخدم ممتعة وسهلة.
+                        </p>
+                        <p>
+                            أنا دائم التعلم والتطور، وأستطيع العمل بكفاءة تحت الضغط سواء بشكل فردي أو ضمن فريق. أتحدث اللغة الإنجليزية بطلاقة، مما يمكنني من متابعة أحدث التقنيات والمشاركة في المشاريع العالمية.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 p-6 glass-effect rounded-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-4">المؤهلات</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="award" class="text-cyan-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold">بكالوريوس تقنية المعلومات</h4>
+                                    <p class="text-gray-400 text-sm">جامعة العلوم والتكنولوجيا (بتقدير امتياز)</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="languages" class="text-cyan-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold">دبلوم عالي في اللغة الإنجليزية</h4>
+                                    <p class="text-gray-400 text-sm">معهد الامتياز (بتقدير امتياز)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-pattern">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">المهارات التقنية</h2>
+                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
+                    <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                        <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" class="w-12 h-12">
+                        <span class="font-semibold">Flutter</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                        <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" class="w-12 h-12">
+                        <span class="font-semibold">Firebase</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                        <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" class="w-12 h-12">
+                        <span class="font-semibold">Figma</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                        <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="Dart" class="w-12 h-12">
+                        <span class="font-semibold">Dart</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                        <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java" class="w-12 h-12">
+                        <span class="font-semibold">Java</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                         <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" class="w-12 h-12">
+                        <span class="font-semibold">JavaScript</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                         <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="MySQL" class="w-12 h-12">
+                        <span class="font-semibold">MySQL</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                         <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" class="w-12 h-12">
+                        <span class="font-semibold">Git</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                         <i data-lucide="box-select" class="w-12 h-12 text-cyan-400"></i>
+                        <span class="font-semibold">GetX</span>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
+                         <i data-lucide="cuboid" class="w-12 h-12 text-cyan-400"></i>
+                        <span class="font-semibold">Provider</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">أبرز المشاريع</h2>
+                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card -->
+                    <div class="glass-effect rounded-xl overflow-hidden group">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">تطبيق هيئة المساحة الجيولوجية</h3>
+                            <p class="text-gray-400 mb-4">تطبيق لعرض معلومات وخدمات هيئة المساحة الجيولوجية والثروات المعدنية.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Firebase</span>
+                            </div>
+                            <a href="https://github.com/JalalFaisalRassam/ygsmrbApp.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
+                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project Card -->
+                    <div class="glass-effect rounded-xl overflow-hidden group">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">نظام إدارة اللقاحات (VIMS)</h3>
+                            <p class="text-gray-400 mb-4">نظام متكامل لإدارة عمليات اللقاحات والتطعيم، يتضمن تطبيق ويب وتطبيق موبايل.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Firebase</span>
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Web App</span>
+                            </div>
+                             <a href="https://github.com/JalalFaisalRassam/Vaccine-Management-System.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
+                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project Card -->
+                    <div class="glass-effect rounded-xl overflow-hidden group">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">تطبيق القرآن الكريم</h3>
+                            <p class="text-gray-400 mb-4">تطبيق بسيط وأنيق لقراءة القرآن الكريم مع ميزات أساسية.</p>
+                             <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UI/UX</span>
+                            </div>
+                            <a href="https://github.com/JalalFaisalRassam/quran-app.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
+                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project Card -->
+                    <div class="glass-effect rounded-xl overflow-hidden group">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">تطبيق للتجارة الإلكترونية</h3>
+                            <p class="text-gray-400 mb-4">واجهة أمامية (Frontend) لتطبيق تجارة إلكترونية بتصميم حديث.</p>
+                           <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UI/UX</span>
+                            </div>
+                            <a href="https://github.com/JalalFaisalRassam/E-commerce-app.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
+                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                     <!-- Project Card -->
+                     <div class="glass-effect rounded-xl overflow-hidden group">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">تصاميم Figma</h3>
+                            <p class="text-gray-400 mb-4">مجموعة من تصاميم واجهات المستخدم لتطبيقات متنوعة (تطبيق ديون، تطبيق طبيب، موقع شخصي).</p>
+                           <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Figma</span>
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UI Design</span>
+                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UX Design</span>
+                            </div>
+                            <span class="text-gray-500">لا يوجد رابط للكود</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-pattern">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">تواصل معي</h2>
+                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                        أنا متاح حاليًا لفرص عمل جديدة ومشاريع حرة. لا تتردد في التواصل معي.
+                    </p>
+                </div>
+                <div class="max-w-md mx-auto glass-effect rounded-2xl p-8">
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4">
+                            <i data-lucide="mail" class="w-6 h-6 text-cyan-400"></i>
+                            <a href="mailto:jalalrassamwork@gmail.com" class="text-lg hover:text-cyan-400 transition-colors">jalalrassamwork@gmail.com</a>
+                        </li>
+                         <li class="flex items-center gap-4">
+                            <i data-lucide="mail-plus" class="w-6 h-6 text-cyan-400"></i>
+                            <a href="mailto:technicalteam4dev@gmail.com" class="text-lg hover:text-cyan-400 transition-colors">technicalteam4dev@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i data-lucide="phone" class="w-6 h-6 text-cyan-400"></i>
+                            <a href="tel:+967777181625" class="text-lg hover:text-cyan-400 transition-colors" dir="ltr">+967 777 181 625</a>
+                        </li>
+                         <li class="flex items-center gap-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-cyan-400"></i>
+                            <span class="text-lg">ذهبان - صنعاء، اليمن</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 جلال فيصل رسام. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
