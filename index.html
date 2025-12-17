@@ -1,306 +1,437 @@
+ 
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جلال فيصل ناصر رسام | مطور تطبيقات فلاتر</title>
+    <title>جلال فيصل رسام | مهندس برمجيات وحلول سحابية</title>
+    <meta name="description" content="الملف الشخصي للمطور جلال فيصل رسام - خبير تطوير تطبيقات وحلول سحابية AWS & DevOps">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-            scroll-behavior: smooth;
+        body { font-family: 'Tajawal', sans-serif; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 4px; }
+        
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .bg-pattern {
-            background-color: #111827;
-            background-image: radial-gradient(circle at 1px 1px, #374151 1px, transparent 0);
-            background-size: 20px 20px;
-        }
-        .glass-effect {
-            background: rgba(31, 41, 55, 0.5);
+        
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
+        }
+
+        /* Animated Background Gradient */
+        .hero-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, rgba(15, 23, 42, 0) 50%);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body class="bg-slate-950 text-slate-200 overflow-x-hidden selection:bg-cyan-500 selection:text-white">
 
-    <!-- Header / Navbar -->
-    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-700">
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 glass border-b border-white/5">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-cyan-400">جلال رسام</h1>
-            <nav class="hidden md:flex space-x-reverse space-x-6">
+            <a href="#" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+                J.Rassam
+            </a>
+            
+            <nav class="hidden md:flex gap-8 text-sm font-medium">
                 <a href="#about" class="hover:text-cyan-400 transition-colors">من أنا</a>
-                <a href="#skills" class="hover:text-cyan-400 transition-colors">المهارات</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">المهارات التقنية</a>
                 <a href="#projects" class="hover:text-cyan-400 transition-colors">المشاريع</a>
-                <a href="#contact" class="hover:text-cyan-400 transition-colors">تواصل معي</a>
+                <a href="#contact" class="px-5 py-2 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:bg-cyan-500 hover:text-white transition-all">تواصل معي</a>
             </nav>
-            <div class="md:hidden">
-                 <!-- Mobile menu button can be added here if needed -->
-            </div>
+
+            <button class="md:hidden text-white hover:text-cyan-400">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="bg-pattern min-h-screen flex items-center">
-            <div class="container mx-auto px-6 py-20 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <!-- Placeholder for a personal photo -->
-                <img src="https://raw.githubusercontent.com/Technical-Team-4Dev/jalalrassam/main/myImage.jpg" 
-     alt="صورة جلال رسام" 
-     class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-gray-700 shadow-lg">
-    <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
-                        <span class="text-white">جلال فيصل ناصر رسام</span>
-                    </h2>
-                    <p class="text-xl md:text-2xl text-cyan-400 mb-8">مطور تطبيقات موبايل باستخدام Flutter | مصمم واجهات UI/UX</p>
-                    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-                        أقوم ببناء تطبيقات موبايل عالية الأداء والجودة بتصميمات عصرية وجذابة، مع خبرة متعمقة في Flutter و Firebase.
-                    </p>
-                    <div class="flex justify-center items-center gap-4">
-                        <a href="#projects" class="bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-all duration-300 shadow-lg">
-                            شاهد أعمالي
-                        </a>
-                        <a href="https://github.com/JalalFaisalRassam" target="_blank" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-600 transition-all duration-300 shadow-lg flex items-center gap-2">
-                            <i data-lucide="github"></i>
-                            GitHub
-                        </a>
+        <section class="min-h-screen flex items-center justify-center pt-20 relative hero-bg">
+            <div class="absolute top-20 right-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div data-aos="fade-down" data-aos-duration="1000">
+                    <div class="relative w-44 h-44 mx-auto mb-8 group">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
+                        <img src="https://raw.githubusercontent.com/Technical-Team-4Dev/jalalrassam/main/myImage.jpg" 
+                             alt="جلال رسام" 
+                             class="relative w-full h-full object-cover rounded-full border-4 border-slate-900 shadow-2xl">
+                        
+                        <div class="absolute bottom-2 right-2 bg-slate-900 p-1.5 rounded-full border border-slate-700" title="Available for Cloud & DevOps roles">
+                            <div class="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                        </div>
                     </div>
+                </div>
+
+                <h1 data-aos="fade-up" data-aos-delay="200" class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+                    جلال <span class="text-cyan-400">رسام</span>
+                </h1>
+                
+                <p data-aos="fade-up" data-aos-delay="300" class="text-xl md:text-2xl text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Full-Stack Developer & Cloud Solutions Enthusiast
+                    <br>
+                    <span class="text-cyan-500/80 text-lg">Flutter • Backend • DevOps • AI Augmented Development</span>
+                </p>
+
+                <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-bold text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="rocket"></i> تصفح المشاريع
+                    </a>
+                    <a href="https://github.com/JalalFaisalRassam" target="_blank" class="w-full sm:w-auto px-8 py-4 glass rounded-xl font-bold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="github"></i> GitHub Profile
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-white">نبذة عني</h2>
-                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-2/3 text-lg text-gray-300 leading-relaxed">
-                        <p class="mb-4">
-                            مطور تطبيقات شغوف حاصل على بكالوريوس في تقنية المعلومات بتقدير امتياز. أمتلك خبرة قوية في تطوير تطبيقات الموبايل باستخدام إطار العمل Flutter، مع التركيز على كتابة كود نظيف وقابل للصيانة.
-                        </p>
-                        <p class="mb-4">
-                            لدي معرفة عميقة في هياكل البيانات والخوارزميات، وقواعد البيانات بنوعيها Relational و NoSQL مثل Firebase و MySQL. بالإضافة إلى خبرتي في التطوير، لدي شغف بتصميم واجهات المستخدم (UI/UX) باستخدام Figma لإنشاء تجارب مستخدم ممتعة وسهلة.
-                        </p>
-                        <p>
-                            أنا دائم التعلم والتطور، وأستطيع العمل بكفاءة تحت الضغط سواء بشكل فردي أو ضمن فريق. أتحدث اللغة الإنجليزية بطلاقة، مما يمكنني من متابعة أحدث التقنيات والمشاركة في المشاريع العالمية.
-                        </p>
+        <div class="bg-slate-900 border-y border-slate-800">
+            <div class="container mx-auto px-6 py-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-x-reverse divide-slate-800">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-3xl font-bold text-white">8+</p>
+                        <p class="text-sm text-cyan-500 uppercase tracking-wider mt-1">مشاريع مكتملة</p>
                     </div>
-                    <div class="md:w-1/3 p-6 glass-effect rounded-2xl">
-                        <h3 class="text-2xl font-bold text-white mb-4">المؤهلات</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="award" class="text-cyan-400 mt-1 flex-shrink-0"></i>
-                                <div>
-                                    <h4 class="font-semibold">بكالوريوس تقنية المعلومات</h4>
-                                    <p class="text-gray-400 text-sm">جامعة العلوم والتكنولوجيا (بتقدير امتياز)</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="languages" class="text-cyan-400 mt-1 flex-shrink-0"></i>
-                                <div>
-                                    <h4 class="font-semibold">دبلوم عالي في اللغة الإنجليزية</h4>
-                                    <p class="text-gray-400 text-sm">معهد الامتياز (بتقدير امتياز)</p>
-                                </div>
-                            </li>
-                        </ul>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-3xl font-bold text-white">13</p>
+                        <p class="text-sm text-cyan-500 uppercase tracking-wider mt-1">شهراً من الإنجاز المكثف</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-3xl font-bold text-white">100%</p>
+                        <p class="text-sm text-cyan-500 uppercase tracking-wider mt-1">English Proficiency</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <p class="text-3xl font-bold text-white">Top</p>
+                        <p class="text-sm text-cyan-500 uppercase tracking-wider mt-1">تقدير امتياز</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-pattern">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-white">المهارات التقنية</h2>
-                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
-                </div>
-                <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
-                    <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                        <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" class="w-12 h-12">
-                        <span class="font-semibold">Flutter</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                        <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" class="w-12 h-12">
-                        <span class="font-semibold">Firebase</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                        <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" class="w-12 h-12">
-                        <span class="font-semibold">Figma</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                        <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="Dart" class="w-12 h-12">
-                        <span class="font-semibold">Dart</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                        <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java" class="w-12 h-12">
-                        <span class="font-semibold">Java</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                         <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" class="w-12 h-12">
-                        <span class="font-semibold">JavaScript</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                         <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="MySQL" class="w-12 h-12">
-                        <span class="font-semibold">MySQL</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                         <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" class="w-12 h-12">
-                        <span class="font-semibold">Git</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                         <i data-lucide="box-select" class="w-12 h-12 text-cyan-400"></i>
-                        <span class="font-semibold">GetX</span>
-                    </div>
-                     <!-- Skill Item -->
-                    <div class="p-4 glass-effect rounded-xl flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 hover:border-cyan-400 border border-transparent">
-                         <i data-lucide="cuboid" class="w-12 h-12 text-cyan-400"></i>
-                        <span class="font-semibold">Provider</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-white">أبرز المشاريع</h2>
-                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card -->
-                    <div class="glass-effect rounded-xl overflow-hidden group">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">تطبيق هيئة المساحة الجيولوجية</h3>
-                            <p class="text-gray-400 mb-4">تطبيق لعرض معلومات وخدمات هيئة المساحة الجيولوجية والثروات المعدنية.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Firebase</span>
-                            </div>
-                            <a href="https://github.com/JalalFaisalRassam/ygsmrbApp.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
-                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Project Card -->
-                    <div class="glass-effect rounded-xl overflow-hidden group">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">نظام إدارة اللقاحات (VIMS)</h3>
-                            <p class="text-gray-400 mb-4">نظام متكامل لإدارة عمليات اللقاحات والتطعيم، يتضمن تطبيق ويب وتطبيق موبايل.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Firebase</span>
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Web App</span>
-                            </div>
-                             <a href="https://github.com/JalalFaisalRassam/Vaccine-Management-System.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
-                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Project Card -->
-                    <div class="glass-effect rounded-xl overflow-hidden group">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">تطبيق القرآن الكريم</h3>
-                            <p class="text-gray-400 mb-4">تطبيق بسيط وأنيق لقراءة القرآن الكريم مع ميزات أساسية.</p>
-                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UI/UX</span>
-                            </div>
-                            <a href="https://github.com/JalalFaisalRassam/quran-app.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
-                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Project Card -->
-                    <div class="glass-effect rounded-xl overflow-hidden group">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">تطبيق للتجارة الإلكترونية</h3>
-                            <p class="text-gray-400 mb-4">واجهة أمامية (Frontend) لتطبيق تجارة إلكترونية بتصميم حديث.</p>
-                           <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UI/UX</span>
-                            </div>
-                            <a href="https://github.com/JalalFaisalRassam/E-commerce-app.git" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
-                                الكود المصدري <i data-lucide="arrow-left" class="h-4 w-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                     <!-- Project Card -->
-                     <div class="glass-effect rounded-xl overflow-hidden group">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">تصاميم Figma</h3>
-                            <p class="text-gray-400 mb-4">مجموعة من تصاميم واجهات المستخدم لتطبيقات متنوعة (تطبيق ديون، تطبيق طبيب، موقع شخصي).</p>
-                           <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Figma</span>
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UI Design</span>
-                                <span class="bg-gray-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">UX Design</span>
-                            </div>
-                            <span class="text-gray-500">لا يوجد رابط للكود</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-pattern">
-            <div class="container mx-auto px-6">
-                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-white">تواصل معي</h2>
-                    <div class="w-24 h-1 bg-cyan-500 mx-auto mt-4"></div>
-                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                        أنا متاح حاليًا لفرص عمل جديدة ومشاريع حرة. لا تتردد في التواصل معي.
-                    </p>
-                </div>
-                <div class="max-w-md mx-auto glass-effect rounded-2xl p-8">
-                    <ul class="space-y-6">
-                        <li class="flex items-center gap-4">
-                            <i data-lucide="mail" class="w-6 h-6 text-cyan-400"></i>
-                            <a href="mailto:jalalrassamwork@gmail.com" class="text-lg hover:text-cyan-400 transition-colors">jalalrassamwork@gmail.com</a>
-                        </li>
-                  
-                        <li class="flex items-center gap-4">
-                            <i data-lucide="phone" class="w-6 h-6 text-cyan-400"></i>
-                            <a href="tel:+967777181625" class="text-lg hover:text-cyan-400 transition-colors" dir="ltr">+967 777 181 625</a>
-                        </li>
-                         <li class="flex items-center gap-4">
-                            <i data-lucide="map-pin" class="w-6 h-6 text-cyan-400"></i>
-                            <span class="text-lg">ذهبان - صنعاء، اليمن - حارة وادي سليمان</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
-            <p>&copy; 2025 جلال فيصل رسام. جميع الحقوق محفوظة.</p>
         </div>
+
+        <section id="about" class="py-24 bg-slate-950">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+                    <div class="lg:w-1/2" data-aos="fade-left">
+                        <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                            <span class="w-8 h-1 bg-cyan-500 rounded-full"></span>
+                            عن خبراتي
+                        </h2>
+                        <div class="space-y-6 text-slate-300 leading-loose text-lg text-justify">
+                            <p>
+                                مطور برمجيات متكامل (Full-Stack) وخبير في تطوير التطبيقات، أمتلك شغفاً كبيراً ببناء <strong class="text-white">البنية التحتية السحابية (Cloud Infrastructure)</strong>.
+                            </p>
+                            <p>
+                                ما يميزني هو قدرتي على الجمع بين تطوير التطبيقات (Flutter/Web) وإدارة العمليات (DevOps). أستخدم أدوات مثل <strong class="text-cyan-400">Terraform</strong> و <strong class="text-cyan-400">Docker</strong> و <strong class="text-cyan-400">AWS</strong> لبناء أنظمة قابلة للتوسع.
+                            </p>
+                            <p class="bg-slate-900 p-4 rounded-lg border-r-4 border-cyan-500">
+                                🚀 <strong class="text-white">Powered by AI:</strong> أستخدم هندسة الأوامر (Prompt Engineering) المتقدمة باللغة الإنجليزية لأتمتة المهام البرمجية ورفع الإنتاجية، مما مكنني من تسليم مشاريع ضخمة في وقت قياسي.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 grid gap-6" data-aos="fade-right">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="bg-cyan-500/10 p-3 rounded-lg text-cyan-400">
+                                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-mono text-slate-500">2023 - 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-1">بكالوريوس تقنية المعلومات</h3>
+                            <p class="text-slate-400">جامعة العلوم والتكنولوجيا</p>
+                            <p class="text-cyan-400 text-sm mt-2 font-medium">✨ تقدير امتياز مع مرتبة الشرف</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl">
+                             <div class="flex items-start justify-between mb-4">
+                                <div class="bg-blue-500/10 p-3 rounded-lg text-blue-400">
+                                    <i data-lucide="languages" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-mono text-slate-500">Professional</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-1">دبلوم عالي في اللغة الإنجليزية</h3>
+                            <p class="text-slate-400">معهد اكسل ايتا</p>
+                            <p class="text-blue-400 text-sm mt-2 font-medium">✨ تقدير امتياز (Fluent in Tech Documentation)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 bg-slate-900 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#1e293b 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4">الترسانة التقنية</h2>
+                    <p class="text-slate-400">مجموعة الأدوات والتقنيات التي أتقنها</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-6 flex items-center gap-2">
+                            <i data-lucide="cloud"></i> Cloud & DevOps
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">AWS</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Terraform</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Ansible</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Docker</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Linux</div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-blue-400 mb-6 flex items-center gap-2">
+                            <i data-lucide="smartphone"></i> Mobile Dev
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Flutter</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Dart</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">GetX</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Provider</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Figma UI</div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-bold text-purple-400 mb-6 flex items-center gap-2">
+                            <i data-lucide="server"></i> Backend & Data
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Laravel</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">ASP.NET</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">MySQL</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">ClickHouse</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">ElasticSearch</div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-xl font-bold text-green-400 mb-6 flex items-center gap-2">
+                            <i data-lucide="cpu"></i> Tools & AI
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Prompt Eng.</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Git/GitHub</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Frida</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Burp Suite</div>
+                            <div class="bg-slate-800 p-3 rounded text-center hover:bg-slate-700 transition">Postman</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 bg-slate-950">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-4xl font-bold text-white mb-2">معرض الأعمال</h2>
+                        <div class="w-20 h-1 bg-cyan-500 rounded-full"></div>
+                    </div>
+                    <a href="https://github.com/JalalFaisalRassam" target="_blank" class="hidden md:flex items-center gap-2 text-cyan-400 hover:text-white transition">
+                        عرض الكل على GitHub <i data-lucide="arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="glass-card rounded-xl overflow-hidden group flex flex-col" data-aos="fade-up">
+                        <div class="p-6 flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">تطبيق هيئة المساحة الجيولوجية</h3>
+                                <i data-lucide="map" class="text-slate-500"></i>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                منصة رقمية متكاملة لخدمات الهيئة، تتيح استعراض البيانات الجيولوجية والخدمات المعدنية.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Flutter</span>
+                                <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Firebase</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-900/50 border-t border-white/5 flex gap-4">
+                            <a href="https://github.com/JalalFaisalRassam/ygsmrb_App.git" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 flex items-center gap-1 transition">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-xl overflow-hidden group flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                         <div class="p-6 flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">نظام إدارة اللقاحات (VIMS)</h3>
+                                <i data-lucide="activity" class="text-slate-500"></i>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                نظام سحابي لإدارة حملات التطعيم. يشمل تطبيق ويب وتطبيق موبايل.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Flutter Web & Mobile</span>
+                                <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Firebase Hosting</span>
+                            </div>
+                        </div>
+                         <div class="p-4 bg-slate-900/50 border-t border-white/5 flex gap-4">
+                            <a href="https://github.com/JalalFaisalRassam/Vaccine-Management-System.git" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 flex items-center gap-1 transition">
+                                <i data-lucide="github" class="w-4 h-4"></i> Web Code
+                            </a>
+                            <a href="https://vaccinemangementsystem.web.app/" target="_blank" class="text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition ml-auto">
+                                <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-xl overflow-hidden group flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                         <div class="p-6 flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">المحاسب التقني</h3>
+                                <i data-lucide="calculator" class="text-slate-500"></i>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                تطبيق مالي متقدم منشور على Google Play لإدارة الحسابات بدقة عالية.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Production</span>
+                                <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Algorithms</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-900/50 border-t border-white/5 flex gap-4">
+                            <a href="https://play.google.com/store/apps/developer?id=sareeSoft" target="_blank" class="text-sm font-semibold text-green-400 hover:text-green-300 flex items-center gap-1 transition">
+                                <i data-lucide="play" class="w-4 h-4"></i> Google Play
+                            </a>
+                             <a href="https://technical-team-4dev.github.io/technical_accountant/" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 flex items-center gap-1 transition ml-auto">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Website
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-xl overflow-hidden group flex flex-col" data-aos="fade-up">
+                         <div class="p-6 flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">نظام البحث في البيانات الضخمة</h3>
+                                <i data-lucide="database" class="text-slate-500"></i>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                نظام متطور للبحث والتحليل في ملايين السجلات بسرعة فائقة.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full border border-purple-500/20">ASP.NET</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full border border-purple-500/20">ClickHouse</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full border border-purple-500/20">ElasticSearch</span>
+                            </div>
+                        </div>
+                         <div class="p-4 bg-slate-900/50 border-t border-white/5 flex gap-4">
+                            <span class="text-xs text-slate-500 flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> مشروع خاص
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-xl overflow-hidden group flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <div class="p-6 flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">تطبيق القرآن الكريم</h3>
+                                <i data-lucide="book-open" class="text-slate-500"></i>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                                تصميم UX/UI مريح للقراءة مع خصائص تصفح سلسة.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Flutter</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-900/50 border-t border-white/5 flex gap-4">
+                             <a href="https://github.com/JalalFaisalRassam/quran-app.git" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 flex items-center gap-1 transition">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-gradient-to-t from-slate-900 to-slate-950 relative">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-2xl mx-auto glass-card p-10 rounded-3xl" data-aos="zoom-in">
+                    <h2 class="text-3xl font-bold text-white mb-6">جاهز للعمل على مشروعك القادم؟</h2>
+                    <p class="text-slate-400 mb-8 text-lg">
+                        أبحث عن فرص في مجال الحوسبة السحابية (Cloud) وتطوير الأنظمة.
+                        <br>متاح للعمل بدوام كامل أو مشاريع حرة.
+                    </p>
+                    
+                    <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-8">
+                        <a href="mailto:jalalrassamwork@gmail.com" class="flex items-center gap-3 text-white hover:text-cyan-400 transition text-lg bg-slate-800/50 px-6 py-3 rounded-xl border border-white/5 hover:border-cyan-500/50">
+                            <i data-lucide="mail" class="text-cyan-500"></i>
+                            jalalrassamwork@gmail.com
+                        </a>
+                        <a href="tel:+967777181625" class="flex items-center gap-3 text-white hover:text-cyan-400 transition text-lg bg-slate-800/50 px-6 py-3 rounded-xl border border-white/5 hover:border-cyan-500/50" dir="ltr">
+                            <i data-lucide="phone" class="text-cyan-500"></i>
+                            +967 777 181 625
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center gap-4 mt-8 pt-8 border-t border-white/10">
+                        <a href="https://github.com/JalalFaisalRassam" class="p-3 bg-slate-800 rounded-full hover:bg-cyan-600 hover:text-white transition text-slate-400">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://play.google.com/store/apps/developer?id=sareeSoft" class="p-3 bg-slate-800 rounded-full hover:bg-green-600 hover:text-white transition text-slate-400">
+                            <i data-lucide="play"></i>
+                        </a>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-white/5 py-8 text-center text-slate-500 text-sm">
+        <p>© 2025 جلال فيصل رسام. تم التصميم والتطوير باستخدام <span class="text-cyan-500">Tailwind CSS</span> & AI Assistance.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Icons
         lucide.createIcons();
+        
+        // Animations
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
     </script>
 </body>
 </html>
+
+ 
